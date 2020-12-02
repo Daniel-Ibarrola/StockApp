@@ -14,9 +14,9 @@ function LineGraphComponent() {
             date.setHours(0,0,0,0);
             date.setDate(i);
             // value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
-            EMA = (value*0.00546) + EMA*(1-0.00546);
-            value = Math.random()*20;
-            data.push({x: date, y: value});
+            EMA = (value*0.0546) + EMA*(1-0.0546);
+            value = Math.random()*50;
+            data.push({x: date, y: EMA});
         }
         setGraphData(data);
     }

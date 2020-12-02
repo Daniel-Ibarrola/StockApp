@@ -34,8 +34,9 @@ function NewsfeedComponent() {
                     </div>
                     <div className='newsfeed-market-section'>
                         <div className='newsfeed-market-box'>
-                            <p>Markets Closed</p>
-                            <h2> Happy Thanksgiving</h2>
+                            <p>Cash Management</p>
+                            <h2>Get a debit card and start earning interest on your cash</h2>
+                            <a href="/">Get Cash Management</a>
                         </div>
                     </div>
                     <div className="newsfeed-popularlists-section">
