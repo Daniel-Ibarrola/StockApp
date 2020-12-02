@@ -11,4 +11,5 @@
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
     color: #5ac53b;
+    cursor: pointer;
 }

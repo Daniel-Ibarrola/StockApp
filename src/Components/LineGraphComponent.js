@@ -7,12 +7,15 @@ function LineGraphComponent() {
     
     const createMockData = () => {
         let data = [];
-        let value = 50;
+        let value = Math.random()*100;
+        let EMA = 0
         for(var i = 0; i < 366; i++) {
             let date = new Date();
             date.setHours(0,0,0,0);
             date.setDate(i);
-            value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
+            // value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
+            EMA = (value*0.00546) + EMA*(1-0.00546);
+            value = Math.random()*20;
             data.push({x: date, y: value});
         }
         setGraphData(data);
@@ -70,7 +73,12 @@ function LineGraphComponent() {
                                 display: false
                             }
                         }]
-                    }
+                    },
+                   elements: {
+                       point: {
+                           radius: 0
+                       }
+                   }
                 }}
             />
         </div>

@@ -39,7 +39,7 @@ function StatsRow(props) {
     }
 
     return (
-        <div className="stats-container stock-button">
+        <div className="stats-container stock-button" onClick={buyStock}>
             <div className="row">
                 <div className="col-4 stock-name">
                     <h4>{props.name}</h4>
@@ -47,11 +47,18 @@ function StatsRow(props) {
                         (props.shares + " shares")}</p>
                 </div>
                 <div className="col-4">
-                    <img src="assets/images/stock.svg" height={16}/>
+                {Number(percentage) > 0 
+                    ?  <img src="assets/images/stock.svg" height={16}/>
+                    :  <img src="assets/images/stocks_down.svg" height={16}/>
+                    }       
                 </div>
                 <div className="col-4 stock-numbers">
                     <p className='row-price'>${props.price}</p>
-                    <p className='row-percentage'> +{Number(percentage).toFixed(2)}%</p>
+                    {/* Render percentage color based on sign */}
+                    {Number(percentage) > 0 
+                    ?  <p className='row-percentage' style={{color:"#5ac53b"}}> +{Number(percentage).toFixed(2)}%</p> 
+                    :  <p className='row-percentage' style={{color:"red"}}> {Number(percentage).toFixed(2)}%</p>
+                    }         
                 </div>
             </div>
         </div>
