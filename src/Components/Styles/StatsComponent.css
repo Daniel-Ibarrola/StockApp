@@ -1,0 +1,17 @@
+.stats { 
+    background-color: #1e2023;
+    border-radius: 5px;
+    border: 1px solid #42494D;
+}
+
+.stats-header {
+    font-size: 16px;
+    align-items: center;
+    border-bottom: 1px solid #42494D;
+    padding: 10px 10px 5px 10px;
+    font-weight: 500;
+}
+
+.stats-lists {
+    border-top: 1px solid #42494D;
+}

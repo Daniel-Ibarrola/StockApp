@@ -1,0 +1,24 @@
+.stock-name h4 {
+    font-size: 16px;
+}
+
+.stock-name p {
+    font-size: 12px;
+}
+
+.stock-numbers {
+    font-size: 12px;
+}
+
+.row-percentage {
+    color: #5ac53b
+}
+
+
+.stock-button {
+    cursor: pointer;
+}
+
+.stock-button:hover {
+    background-color: #31363a;
+}
